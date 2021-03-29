@@ -1,0 +1,26 @@
+<section class="d-flex flex-row flex-wrap justify-content-between">
+  <ng-container *ngFor="let card of cardDetails">
+    <mat-card class="m-1">
+      <mat-card-header>
+        <img mat-card-avatar src={{card?.usePicUrl}}>
+        <mat-card-title>{{card?.userName}}</mat-card-title>
+        <mat-card-subtitle>{{card?.uploadTime}}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src={{card?.postImage}} alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <div class="title">
+          <h1 class="m-0">{{card?.title}}</h1>
+          <span>{{card?.subTitle}}</span>
+        </div>
+        <p class="mt-3">{{card?.description}} </p>
+      </mat-card-content>
+      <mat-card-actions class="d-flex flex-row justify-content-between align-content-center">
+        <span>
+          <button mat-button>SHARE</button>
+          <button mat-button (click)="openDialog()">EXPLORE</button>
+        </span>
+        <mat-icon class="align-self-center cursor">keyboard_arrow_down</mat-icon>
+      </mat-card-actions>
+    </mat-card>
+  </ng-container>
+</section>

@@ -1,0 +1,36 @@
+mat-card {
+  max-width: 350px;
+
+  @media screen and (max-width: 599px) {
+    max-width: 100%;
+  }
+
+  mat-card-header {
+    mat-card-title {
+      font-size: 1rem;
+    }
+
+    mat-card-subtitle {
+      color: #736d6d;
+    }
+  }
+
+  mat-card-content {
+    .title {
+      font-family: 'Montserrat', sans-serif;
+
+      h1 {
+        color: #464343;
+      }
+
+      span {
+        color: #736d6d;
+      }
+    }
+  }
+
+  button {
+    color: #03a9f4;
+  }
+
+}

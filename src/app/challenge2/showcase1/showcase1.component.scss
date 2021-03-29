@@ -1,0 +1,52 @@
+section {
+padding: 100px 0px;
+  height: auto;
+  background: linear-gradient(180deg, #172361 50%, #d9dbe0 50%);
+  @media screen and (max-width: 599px) {
+    padding: 40px 0px;
+  }
+  .contain {
+    gap: 100px;
+    @media screen and (max-width: 599px) {
+      gap: 20px;
+    }
+    .section1{
+      caption {
+        font-size: 3rem;
+        color: white;
+      }
+      p {
+        text-align: center;
+        font-size: 1rem;
+        color: rgb(212, 205, 190);
+      }
+    }
+
+
+    .section2 {
+      @media screen and (max-width: 599px) {
+       padding: 0px 10px;
+       }
+      caption {
+        font-size: 2rem;
+        color: rgb(34, 29, 29);
+        @media screen and (max-width: 599px) {
+          font-size: 1.9rem;
+          }
+      }
+      .questions {
+        gap: 5rem;
+        @media screen and (max-width: 599px) {
+         gap: 2rem;
+        }
+        p {
+          max-width: 35rem;
+          font-size: 1rem;
+          color:#515254
+        }
+      }
+    }
+  }
+
+}
+

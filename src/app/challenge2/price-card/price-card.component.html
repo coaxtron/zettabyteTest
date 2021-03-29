@@ -1,0 +1,30 @@
+<aside class="d-flex cursor flex-row flex-wrap align-items-center justify-content-center">
+  <ng-container *ngFor="let priceDetail of priceDetails">
+
+    <section>
+      <header class="d-flex flex-row justify-content-between align-content-center">
+        <h1 class="m-0">{{priceDetail?.category}}</h1>
+        <span *ngIf="priceDetail?.save" class="align-self-center">Save {{priceDetail?.save}}</span>
+      </header>
+     <div class="detail">
+      <div class="d-flex flex-column align-items-center">
+        <div class="price">
+          <sup>$</sup><span>{{priceDetail?.price}}</span><sub>/month</sub>
+        </div>
+      </div>
+      <div class="project-details">
+        <ng-container *ngFor="let list of priceDetail?.detailsProject">
+          <ul>
+            <li><span>{{list?.projects}}</span> Projects</li>
+            <li><span>{{list?.pages}}</span> Pages</li>
+            <li><span>{{list?.mbDiskSpace}}</span> Mb Disk Space</li>
+          </ul>
+        </ng-container>
+      </div>
+      <span class="button p-4 d-flex flex-column align-items-center">
+        <button class="btn btn-primary" (click)="buyNow()">BUY NOW</button>
+      </span>
+     </div>
+    </section>
+  </ng-container>
+</aside>

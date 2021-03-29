@@ -1,0 +1,32 @@
+<h2 mat-dialog-title>Add a Movie</h2>
+<form [formGroup]="movieForm" (submit)="onSubmit(movieForm.value)">
+<mat-dialog-content class="mat-typography">
+  <mat-form-field appearance="legacy">
+    <mat-label>Movie Title</mat-label>
+    <input matInput placeholder="Movie Title" formControlName="title" >
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-content class="mat-typography">
+  <mat-form-field appearance="legacy">
+    <mat-label>Amount of episodes</mat-label>
+    <input matInput type="number" placeholder="Amount of episodes"  min="10" formControlName="episodes" >
+    <span matSuffix>episodes</span>
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-content class="mat-typography">
+  <mat-form-field appearance="legacy">
+    <mat-label>Movie information URL</mat-label>
+    <input matInput placeholder="Movie information URL" formControlName="info_url" >
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-content class="mat-typography">
+  <mat-form-field appearance="legacy">
+    <mat-label>Movie watch URL</mat-label>
+    <input matInput placeholder="Movie watch URL" formControlName="watch_url" >
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-raised-button mat-dialog-close color="accent" (click)="onNoClick()" >Cancel</button>
+  <button mat-button type="submit" [mat-dialog-close]="true" cdkFocusInitial>Submit</button>
+</mat-dialog-actions>
+</form>

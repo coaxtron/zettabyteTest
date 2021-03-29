@@ -1,0 +1,54 @@
+aside {
+  gap: 20px;
+  section {
+    max-width: 350px;
+    width: 350px;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.5s all ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+    }
+    header {
+      background-color: rgb(82, 86, 89);
+      padding: 10px 20px;
+      color: white;
+    }
+    .detail {
+      background-color: white;
+    }
+    .price {
+      padding: 70px 0px 50px 0px;
+      position: relative;
+      span{
+        font-size: 5rem;
+      }
+      sub {
+        font-size: 1.5rem;
+        color: gray;
+      }
+      sup {
+        position: absolute;
+        font-size: 2rem;
+        color: gray;
+        top: 50px;
+      left: -15px;
+      }
+
+
+    }
+    .project-details , .button{
+      background-color: white;
+      ul{
+        list-style-type:none !important;
+        li {
+          color: #585555;
+       span {
+         color: black;
+       }
+        }
+        }
+    }
+  }
+}
+
